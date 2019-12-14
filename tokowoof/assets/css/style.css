@@ -1,0 +1,12 @@
+body{
+    background: url('./../../woof.jpg');
+    background-size: 100%;
+    background-position-x: 50%;
+    background-position-y: 15%;
+}
+
+h1{
+    color:red;
+    size: 400%;
+
+}

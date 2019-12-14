@@ -42,13 +42,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
         //$conn->query($sql);
 
         $statement = $conn->prepare($sql);
-        $statement->bind_param("sis",$productName,$productPrice,$productImage);
+        $statement->bind_param("sisi",$productName,$productPrice,$productImagePath,$productId);
         $statement->execute();
         $result = $statement->get_result() ;
         
 
     move_uploaded_file($_FILES['productImage']['tmp_name'],$target_file_path);
 
-    header("location: ./../adminindex.php");
+    header("location: ./../index.php");
     }
 }
